@@ -1,0 +1,76 @@
+.banner {
+  width: 100%;
+  height: 295rpx;
+  margin-top: 10rpx;
+}
+
+.banner swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.banner image {
+  width: 100%;
+  height: 100%;
+}
+.menu{
+  display: flex;
+}
+.menu-1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  padding-top: 20rpx;
+}
+.menu-1 text{
+  font-size: 27rpx;
+}
+.iconfont{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 100rpx;
+  background: rgb(233, 223, 223);
+  font-size: 50rpx;
+}
+.information image {
+  width: 400rpx;
+  height: 100rpx;
+  padding-left: 25%;
+}
+
+.advertising {
+  height: 25rpx;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.advertising .message,
+.advertising .more {
+  font-size: 24rpx;
+  padding: 20rpx;
+  color: gray;
+}
+
+.advertising .message::before {
+  display: block;
+  width: 6rpx;
+  height: 23rpx;
+  background-color: red;
+  content: "";
+  position: absolute;
+  left: 40rpx;
+  bottom: -23rpx;
+  border-radius: 3rpx;
+}
+
+.advertising .message {
+  padding-left: 50rpx;
+}
+
+.advertising .more {
+  padding-right: 50rpx;
+}

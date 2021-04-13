@@ -1,0 +1,59 @@
+<view class="banner">
+  <swiper indicator-dots autoplay interval="3000" circular indicator-color="rgba(255,255,255,0.5)">
+    <swiper-item>
+      <image src="/images/banner5.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/banner1.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/banner2.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/banner3.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/banner4.jpg"></image>
+    </swiper-item>
+  </swiper>
+</view>
+<view class="menu">
+  <view class="menu-1">
+  <navigator class="iconfont icon-Slice19"></navigator>
+    <text>疫情防控</text>
+  <navigator class="iconfont icon-zixun"></navigator>
+    <text>校园资讯</text>
+  </view>
+  <view class="menu-1">
+  <navigator class="iconfont icon-yigonghuzhu"></navigator>
+    <text>学习互助</text>
+    <navigator class="iconfont icon-tushu"></navigator>
+    <text>网络图书</text>
+  </view>
+  <view class="menu-1">
+    <navigator class="iconfont icon-part-time-job"></navigator>
+    <text>外快兼职</text>
+    <navigator class="iconfont icon-tubiaozhizuomoban"></navigator>
+    <text>专升本</text>
+  </view>
+  <view class="menu-1">
+    <navigator class="iconfont icon-ershoushichang"></navigator>
+    <text>跳蚤市场</text>
+    <navigator class="iconfont icon-waimai"></navigator>
+    <text>校园外卖</text>
+  </view>
+</view>
+<view class="information">
+  <navigator>
+    <image src="/images/ggs.jpg"></image>
+  </navigator>
+</view>
+<view class="advertise">
+  <view class="advertising">
+    <view class="message">更多资讯</view>
+    <navigator class="more">more ></navigator>
+  </view>
+  <view class="ggmain">
+
+  </view>
+</view>

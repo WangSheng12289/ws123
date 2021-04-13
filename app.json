@@ -1,0 +1,29 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/love/love"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#E1FFFF",
+    "navigationBarTitleText": "微校园测试",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#00BFFF",
+    "selectedColor":"#CD5C5C",
+    "backgroundColor": "#E1FFFF",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页","iconPath":"/images/t5.png","selectedIconPath":"/images/t6.png"
+    }, {"pagePath": "pages/love/love",
+      "text": "表白墙" ,"iconPath":"/images/t3.png","selectedIconPath":"/images/t4.png"   
+    },{"pagePath": "pages/logs/logs",
+      "text": "消息","iconPath":"/images/t1.png","selectedIconPath":"/images/t2.png"
+    },{"pagePath": "pages/logs/logs",
+        "text": "我的","iconPath":"/images/t7.png","selectedIconPath":"/images/t8.png"}]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
