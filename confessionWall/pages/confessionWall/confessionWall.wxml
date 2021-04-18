@@ -1,0 +1,125 @@
+<view class="bg-group" style="height:{{height * 2.7}}rpx;">
+  <view class="bg-header" style="width:{{bgHeaderR * 2}}rpx;height:{{bgHeaderR * 2}}rpx;"></view>
+</view>
+<swiper class='swiper' style='width:{{width*-30}}rpx;height:{{height*2}}rpx;' autoplay indicator-dots autoplay indicator-dots interval="3000" circular>
+  <swiper-item>
+    <image src='https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=237097378,1234629845&fm=26&gp=0.jpg'></image>
+  </swiper-item>
+  <swiper-item>
+    <image src='https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=250287720,435195661&fm=26&gp=0.jpg'></image>
+  </swiper-item>
+  <swiper-item>
+    <image src='https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2776473053,3778805647&fm=26&gp=0.jpg'></image>
+  </swiper-item>
+  <swiper-item>
+    <image src='https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=841536615,2308079028&fm=26&gp=0.jpg'></image>
+  </swiper-item>
+</swiper>
+<!-- 导航条 -->
+<view class="nav">
+  <view bindtap="navSwitch" data-index="0" class="{{navState==0 ? 'nav-switch-style':'nav-switch-begin'}}">
+    本校
+  </view>
+  <view bindtap="navSwitch" data-index="1" class="{{navState==1 ? 'nav-switch-style':'nav-switch-begin'}}">
+    推荐
+  </view>
+  <view bindtap="navSwitch" data-index="2" class="{{navState==2 ? 'nav-switch-style':'nav-switch-begin'}}">
+    心愿墙
+  </view>
+  <view bindtap="navSwitch" data-index="3" class="{{navState==3 ? 'nav-switch-style':'nav-switch-begin'}}">
+    功能暂定
+  </view>
+</view>
+<!-- 不可滑动页 -->
+<view>
+  <view wx:if="{{navState==0}}" class="style-default">
+    <view class="title">
+      <view class="title-decorate"></view>
+      <view class="title-text">我的关注</view>
+    </view>
+    <scroll-view class="video-scroll-view" scroll-x="ture">
+      <view class="item-navigator">
+        <view class="scroll-image">
+          <image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=202695443,812736273&fm=26&gp=0.jpg" />
+        </view>
+        <view class="scroll-name">德锦</view>
+        <view class="scroll-text"></view>
+      </view>
+      <view class="item-navigator">
+        <view class="scroll-image">
+          <image src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1834742881,2792191833&fm=26&gp=0.jpg" />
+        </view>
+        <view class="scroll-name">霹雳番茄卡蛋</view>
+        <view class="scroll-text"></view>
+      </view>
+      <view class="item-navigator">
+        <view class="scroll-image">
+          <image src="https://img0.baidu.com/it/u=510048322,1420180238&fm=26&fmt=auto&gp=0.jpg" />
+        </view>
+        <view class="scroll-name">润泽</view>
+        <view class="scroll-text"></view>
+      </view>
+      <view class="item-navigator">
+        <view class="scroll-image">
+          <image src="https://img0.baidu.com/it/u=510048322,1420180238&fm=26&fmt=auto&gp=0.jpg" />
+        </view>
+        <view class="scroll-name">北港</view>
+        <view class="scroll-text"></view>
+      </view>
+    </scroll-view>
+    <!-- 分割连个板块 -->
+    <view class="title">
+      <view class="title-decorate"></view>
+      <view class="title-text">最新动态</view>
+    </view>
+    <!-- 定义文字动态模板 -->
+    <view class="user-content" wx:for="{{writeNews}}" wx:key="ii" wx:for-item="writeNew" wx:for-index="windex">
+      <view class="user-headpor">
+        <image src="{{writeNew.author.avatarUrl}}" />
+      </view>
+      <view class="user-text">
+        <view class="user-name">{{writeNew.author.nickName}}</view>
+        <view class="user-input">{{writeNew.content}}</view>
+        <block wx:if="{{writeNew.image.length > 0}}">
+          <!-- 定义一张图片的布局 -->
+          <view class="user-image" wx:if="{{writeNew.image.length === 1}}">
+            <image src="{{writeNew.image[0]}}" style="width: 100%;max-height: {{twoImage * 2}}rpx;" mode="aspectFill" />
+          </view>
+          <!-- 定义两张或四章图片 -->
+          <view class="user-image" wx:if="{{writeNew.image.length === 2 || writeNew.image.length === 4}}">
+            <image wx:for="{{writeNew.image}}" wx:for-item="img" src="{{img}}" style="width: {{twoImage * 2}}rpx;max-height: {{twoImage * 2}}rpx;" mode="aspectFill" />
+          </view>
+          <!-- 定义其他图片 -->
+          <view class="user-image" wx:if="{{writeNew.image.length === 9}}">
+            <image wx:for="{{writeNew.image}}" wx:for-item="img" src="{{img}}" style="width: {{threeImage * 2}}rpx;max-height: {{threeImage * 2}}rpx;" mode="aspectFill" />
+            <image wx:if="{{writeNew.image.length%3 == 2}}" src="" style="width: {{threeImage * 2}}rpx;height: 1px;" />
+          </view>
+        </block>
+      </view>
+      <view class="user-foot">
+        <view class="comment-group">
+          <image src="../../images/edit-box-line.png" />
+          <view class="text">评论</view>
+        </view>
+        <view class="praise-group" bind:tap="onPraiseTap" data-new="{{windex}}">
+          <block wx:if="{{writeNew.praise.length != undefined && writeNew.praise.length != 0}}">
+            <image src="../../images/heart-fill-hover.png" />
+            <view class="text">{{writeNew.praise.length}}</view>
+          </block>
+          <block wx:if="{{writeNew.praise == undefined || writeNew.praise.length == 0}}">
+            <image src="../../images/heart-line.png" />
+            <view class="text">喜欢</view>
+          </block>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:elif="{{navState==1}}" class="style-default"></view>
+  <view wx:elif="{{navState==2}}" class="style-default"></view>
+  <view wx:else="{{navState==3}}" class="style-default"></view>
+</view>
+<!-- 发动态 -->
+<view class="release" hover-class="rel-hover" bindtap="onWriteTab">
+  <view class="reCol"></view>
+  <view class="reRow"></view>
+</view>

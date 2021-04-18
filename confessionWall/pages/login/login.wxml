@@ -1,0 +1,5 @@
+<view class="login-group">
+    <view class="container">
+            <button class="userinfo" bindtap="getUserProfile"> 获取授权 </button>
+    </view>
+</view>
