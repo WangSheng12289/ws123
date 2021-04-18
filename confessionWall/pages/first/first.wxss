@@ -1,0 +1,65 @@
+.banner{
+  height: 295rpx;
+}
+.banner swiper{
+  width: 100%;
+  height: 100%;
+}
+.banner image{
+  width: 750rpx;
+  height: 295rpx;
+  padding:0 10rpx;
+}
+/* 导航菜单栏 */
+.nav{
+width: 100%;
+}
+.navItem{
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 20%;
+}
+.nav_2 image{
+  width: 81rpx;
+  height: 81rpx;
+  display: flex;
+}
+.nav_1 image{
+  width: 81rpx;
+  height: 81rpx;
+    display: flex;
+}
+.nav_1{
+  display: flex;
+  margin: 30rpx 20rpx;
+}
+.nav_2{
+  display: flex;
+  margin: 50rpx 20rpx;
+}
+.nav .navItem text{
+  font-size: 23rpx;
+  color: cadetblue;
+}
+/* 广告设计 */
+.advertising{
+  height: 216rpx;
+}
+.advertising swiper{
+  width: 100%;
+  height: 100%;
+}
+.advertising image{
+  width: 740rpx;
+  height: 216rpx;
+  border-radius: 50rpx;
+  padding-left: 7rpx;
+}
+/* 表白墙区域 */
+.Tabar-love{
+  width: 750rpx;
+  height: 200rpx;
+  border: 1px solid red;
+  margin-top: 20rpx;
+}

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "segment": "/components/segment/segment"
+  },
+  "backgroundColor": "#E2E2E2",
+  "navigationBarTitleText": "表白墙"
+}

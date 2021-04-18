@@ -1,0 +1,222 @@
+<view class="bg-group">
+  <view class="bg-header" style="width:{{bgHeaderR * 2}}rpx;height:{{bgHeaderR * 2}}rpx;left: -{{bgHeaderMove * 2}}rpx;"></view>
+</view>
+<swiper class='swiper' style='width:{{width*-30}}rpx;height:{{height*2}}rpx;' autoplay indicator-dots autoplay indicator-dots interval="3000" circular>
+  <swiper-item>
+    <image src='https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=237097378,1234629845&fm=26&gp=0.jpg'></image>
+  </swiper-item> 
+  <swiper-item>
+    <image src='https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=250287720,435195661&fm=26&gp=0.jpg'></image>
+  </swiper-item>
+  <swiper-item>
+    <image src='https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2776473053,3778805647&fm=26&gp=0.jpg'></image>
+  </swiper-item>
+  <swiper-item>
+    <image src='https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=841536615,2308079028&fm=26&gp=0.jpg'></image>
+  </swiper-item>
+</swiper>
+<!-- <segment defaultIndex="1"></segment> -->
+<!-- 导航条 -->
+<view class="nav">
+  <view bindtap="navSwitch" data-index="0" class="{{navState==0 ? 'nav-switch-style':'nav-switch-begin'}}">本校</view>
+  <view bindtap="navSwitch" data-index="1" class="{{navState==1 ? 'nav-switch-style':'nav-switch-begin'}}">推荐</view>
+  <view bindtap="navSwitch" data-index="2" class="{{navState==2 ? 'nav-switch-style':'nav-switch-begin'}}">心愿墙</view>
+  <view bindtap="navSwitch" data-index="3" class="{{navState==3 ? 'nav-switch-style':'nav-switch-begin'}}">功能暂定</view>
+</view>
+<!-- 不可滑动页 -->
+<view>
+  <view wx:if="{{navState==0}}" class="style-default">
+    <view class="title">
+      <view class="title-decorate"></view>
+      <view class="title-text">我的关注</view>
+    </view>
+
+    <scroll-view class="video-scroll-view" scroll-x="ture">
+    <view class="item-navigator">
+      <view class="scroll-image">
+        <image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=202695443,812736273&fm=26&gp=0.jpg" />
+      </view>
+      <view class="scroll-name">德锦</view>
+      <view class="scroll-text"></view>
+    </view>
+    <view class="item-navigator">
+      <view class="scroll-image">
+        <image src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1834742881,2792191833&fm=26&gp=0.jpg" />
+      </view>
+      <view class="scroll-name">霹雳番茄卡蛋</view>
+      <view class="scroll-text"></view>
+    </view>
+    <view class="item-navigator">
+      <view class="scroll-image">
+        <image src="https://img0.baidu.com/it/u=510048322,1420180238&fm=26&fmt=auto&gp=0.jpg" />
+      </view>
+      <view class="scroll-name">润泽</view>
+      <view class="scroll-text"></view>
+    </view>
+    <view class="item-navigator">
+      <view class="scroll-image">
+        <image src="https://img0.baidu.com/it/u=510048322,1420180238&fm=26&fmt=auto&gp=0.jpg" />
+      </view>
+      <view class="scroll-name">北港</view>
+      <view class="scroll-text"></view>
+    </view>
+    
+  </scroll-view>
+
+
+<!-- 分割连个板块 -->
+    <view class="title">
+      <view class="title-decorate"></view>
+      <view class="title-text">最新动态</view>
+    </view>
+  <!-- 定义文字动态模板 -->
+    <view class="user-content">
+      <view class="user-headpor">
+        <image src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3907223849,2417694520&fm=26&gp=0.jpg" />
+      </view>
+      <view class="user-text">
+        <view class="user-name">猫与旧港</view>
+        <view class="user-input">我吹过你吹过的晚风，这算不算相拥</view>
+      </view>
+      <view class="user-foot">
+        <view class="comment-group">
+          <image src="../../images/edit-box-line.png" />
+          <view class="text">评论</view>
+        </view>
+        <view class="praise-group">
+          <image src="../../images/heart-line.png" />
+          <view class="text">喜欢</view>
+        </view>
+      </view>
+    </view>
+    <!-- 定义一张图片的布局 -->
+    <view class="user-content">
+      <view class="user-headpor">
+        <image src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3907223849,2417694520&fm=26&gp=0.jpg" />
+      </view>
+      <view class="user-text">
+        <view class="user-name">猫与旧港</view>
+        <view class="user-input">我吹过你吹过的晚风，这算不算相拥</view>
+        <view class="user-image">
+          <image src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3385159663,3162195144&fm=11&gp=0.jpg" style="width: 100%;" mode="widthFix" />
+        </view>
+      </view>
+      <view class="user-foot">
+        <view class="comment-group">
+          <image src="../../images/edit-box-line.png" />
+          <view class="text">评论</view>
+        </view>
+        <view class="praise-group">
+          <image src="../../images/heart-line.png" />
+          <view class="text">喜欢</view>
+        </view>
+      </view>
+    </view>
+    <!-- 定义两张图片的布局 -->
+    <view class="user-content">
+      <view class="user-headpor">
+        <image src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3907223849,2417694520&fm=26&gp=0.jpg" style="max-height: {{twoImage * 4}}rpx;" />
+      </view>
+      <view class="user-text">
+        <view class="user-name">猫与旧港</view>
+        <view class="user-input">我吹过你吹过的晚风，这算不算相拥</view>
+        <view class="user-image">
+          <image src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3385159663,3162195144&fm=11&gp=0.jpg" style="width: {{twoImage * 2}}rpx;max-height: {{twoImage * 2}}rpx;" mode="widthFix" />
+          <image src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3385159663,3162195144&fm=11&gp=0.jpg" style="width: {{twoImage * 2}}rpx;max-height: {{twoImage * 2}}rpx;" mode="widthFix" />
+        </view>
+      </view>
+      <view class="user-foot">
+        <view class="comment-group">
+          <image src="../../images/edit-box-line.png" />
+          <view class="text">评论</view>
+        </view>
+        <view class="praise-group">
+          <image src="../../images/heart-line.png" />
+          <view class="text">喜欢</view>
+        </view>
+      </view>
+    </view>
+        <!-- 四张图 -->
+    <view class="user-content">
+      <view class="user-headpor">
+        <image src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3907223849,2417694520&fm=26&gp=0.jpg" />
+      </view>
+      <view class="user-text">
+        <view class="user-name">猫与旧港</view>
+        <view class="user-input">我吹过你吹过的晚风，这算不算相拥</view>
+        <view class="user-image">
+          <image src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3385159663,3162195144&fm=11&gp=0.jpg" style="width: {{twoImage * 2}}rpx;max-height: {{twoImage * 2}}rpx;" mode="widthFix" />
+          <image src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3385159663,3162195144&fm=11&gp=0.jpg" style="width: {{twoImage * 2}}rpx;max-height: {{twoImage * 2}}rpx;" mode="widthFix" />
+          <image src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3385159663,3162195144&fm=11&gp=0.jpg" style="width: {{twoImage * 2}}rpx;max-height: {{twoImage * 2}}rpx;" mode="widthFix" />
+          <image src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1796453895,2279702434&fm=26&gp=0.jpg" style="width: {{twoImage * 2}}rpx;max-height: {{twoImage * 2}}rpx;" mode="widthFix" /> 
+        </view>
+      </view>
+      <view class="user-foot">
+        <view class="comment-group">
+          <image src="../../images/edit-box-line.png" />
+          <view class="text">评论</view>
+        </view>
+        <view class="praise-group">
+          <image src="../../images/heart-line.png" />
+          <view class="text">喜欢</view>
+        </view>
+      </view>
+    </view>
+      <!-- 其他图片 -->
+    <view class="user-content">
+      <view class="user-headpor">
+        <image src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3907223849,2417694520&fm=26&gp=0.jpg" />
+      </view>
+      <view class="user-text">
+        <view class="user-name">猫与旧港</view>
+        <view class="user-input">我吹过你吹过的晚风，这算不算相拥</view>
+        <view class="user-image" >
+          <image wx:for="{{images}}" wx:key="id" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3385159663,3162195144&fm=11&gp=0.jpg" style="width: {{threeImage * 2}}rpx;max-height: {{threeImage * 2}}rpx;" mode="widthFix" />
+          <image wx:if="{{images.length%3 == 2}}" src="" style="width: {{threeImage * 2}}rpx;height: 1px;" />
+        </view>
+      </view>
+      <view class="user-foot">
+        <view class="comment-group">
+          <image src="../../images/edit-box-line.png" />
+          <view class="text">评论</view>
+        </view>
+        <view class="praise-group">
+          <image src="../../images/heart-line.png" />
+          <view class="text">喜欢</view>
+        </view>
+      </view>
+    </view>
+    <!-- 视频布局 -->
+    <view class="user-content">
+      <view class="user-headpor">
+        <image src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3907223849,2417694520&fm=26&gp=0.jpg" />
+      </view>
+      <view class="user-text">
+        <view class="user-name">猫与旧港</view>
+        <view class="user-input">我吹过你吹过的晚风，这算不算相拥</view>
+        <!-- <view class="user-video">
+          <video src="https://video.699pic.com/videos/70/60/38/b_d8X34agX7iRS1617706038_10s.mp4" ></video>
+        </view> -->
+      </view> 
+      <view class="user-foot">
+        <view class="comment-group">
+          <image src="../../images/edit-box-line.png" />
+          <view class="text">评论</view>
+        </view>
+        <view class="praise-group">
+          <image src="../../images/heart-line.png" />
+          <view class="text">喜欢</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view wx:elif="{{navState==1}}" class="style-default"></view>
+  <view wx:elif="{{navState==2}}" class="style-default"></view>
+  <view wx:else="{{navState==3}}" class="style-default"></view>
+</view>
+<!-- 发动态 -->
+<view class="release" hover-class="rel-hover" bindtap="onWriteTab">
+  <view class="reCol"></view>
+  <view class="reRow"></view>
+</view>

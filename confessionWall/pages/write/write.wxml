@@ -1,0 +1,21 @@
+<view class="container">
+    <form bindsubmit="onSubmitEvent">
+        <textarea name="content" class="textarea" placeholder="请输入文字">
+        </textarea>
+        <view class="group">
+            <view class="image-list-group">
+                <view class="image-group" style="width: {{imageHeight * 2}}rpx;height: {{imageHeight * 2}}rpx;" wx:for="{{imageList}}">
+                    <image src="{{item}}" style="width: {{imageHeight * 2}}rpx;" mode="widthFix"></image>
+                    <view class="off-btn"></view>
+                </view>
+            </view> 
+            <view class="image-add" bind:tap="addImageTap" style="width: {{imageHeight * 2}}rpx;height:{{imageHeight * 2}}rpx;">
+                <view class="row"></view>
+                <view class="col"></view>
+            </view>
+            <view class="temp" style="width: {{imageHeight * 2}}rpx;height:{{imageHeight * 2}}rpx;"></view> 
+            <view class="temp" style="width: {{imageHeight * 2}}rpx;height:{{imageHeight * 2}}rpx;"></view> 
+        </view>
+        <button form-type="submit" type="primary" class="write-text-btn">发表</button>
+    </form>
+</view>

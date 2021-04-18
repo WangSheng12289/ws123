@@ -1,0 +1,45 @@
+<!-- bindtap，当用户点击该组件的时候会在该页面对应的Page中找到相应的事件处理函数。 -->
+<view class="bg-gray">
+  <scroll-view>
+    <view class="bg-yellow top-user">
+      <view wx:if="{{UserPicture}}">
+        <image class="avatar" src="{{UserPicture}}" bindtap="hasLogin" data-url="">用户头像</image>
+      </view>
+      <!-- user_edit用户编辑 -->
+      <!-- 用户昵称用户昵称 -->
+      <text class="user_edit" bindtap="editButtonClick">编辑</text>
+      <view class="user_nickname" bindtap="nameviewtap">{{username}}</view>
+      <view wx:if="{{userinfo.role == 1}}" class="user_area">{{userinfo.service.ServiceLocation}} </view>
+      <view wx:if="{{userinfo.role == 1}}" class="user_commpany">{{userinfo.service.ServiceName}}</view>
+    </view>
+    <!-- userinfo -->
+    <view class="mine">
+      <view class="weibiView" bindtap="hasLogin" data-url="">
+        <text class="user_weibiCount" data-url="">{{userinfo.user.Account}}</text>
+        <text class="user_myweibi" data-url="">我的微币</text>
+      </view>
+      <view class="collectView" bindtap="hasLogin" data-url="">
+        <text class="user_collectCount" data-url="">{{userinfo.MyColCount}}</text>
+        <text class="user_myCollect" data-url="">我的收藏</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+<view class="btn-area">
+  <view class="member-center" bindtap="goPub">发布信息
+  </view>
+  <view bindtap="confirmClick" class="member-center">服务方认证
+  </view>
+
+  <view bindtap="hasLogin" data-url="" class="member-center">会员中心
+
+    <!--</navigator>-->
+  </view>
+  <view class="member-center" bindtap="goStar">星级认证
+  </view>
+
+  <!--</view>-->
+  <navigator url="" class="set-up">设置
+  </navigator>
+</view>

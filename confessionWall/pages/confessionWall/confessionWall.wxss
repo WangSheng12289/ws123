@@ -1,0 +1,211 @@
+page {
+    background-color: rgb(244, 244, 244);
+} 
+.bg-group {
+    width: 100%;
+    height: 330rpx;
+    position: absolute;
+    z-index: -1;
+}
+.bg-group .bg-header {
+    background-color: #b6d1cc;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+    
+}
+.swiper image {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper {
+    box-sizing: border-box;
+    margin: 15rpx;
+    border-radius: 20rpx;
+    overflow: hidden;
+}
+
+.title {
+    width: 240rpx;
+    height: 38rpx;
+    line-height: 38rpx;
+    /* border: 1px solid red; */
+    margin-top: 20rpx;
+    display: flex;
+}
+
+.title .title-decorate {
+    width: 21rpx;
+    height: 42rpx;
+    background-color: #8BD875;
+    margin-left: 18rpx;
+}
+
+.title .title-text {
+    margin: 0px 18rpx;
+    font-size: 36rpx;
+}
+
+.release {
+    width: 90rpx;
+    height: 90rpx;
+    text-align: center;
+    background-color: rgb(50, 152, 219);
+    border-radius: 50%;
+    position: fixed;
+    bottom: 230rpx;
+    right: 100rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.release .reCol,.reRow {
+    position: absolute;
+    border-radius: 20%;
+    background-color: #fff;
+}  
+.release .reCol {
+    width: 14%;
+    height: 70%;
+}
+.release .reRow {
+    width: 70%;
+    height: 14%;
+}
+/* .rel-hover {
+    width: 70rpx;
+    height: 70rpx;
+} */
+.nav {
+    display: flex;
+    width: 100%;
+    height: 55rpx;
+    line-height: 55rpx;
+    font-size: 32rpx;
+    justify-content: space-around;
+    font-family: "微软雅黑";
+    color: #3471b0;
+}
+
+/* 点击后的样式 */
+.nav-switch-style {
+    color: #004559;
+    font-weight: bold;
+    font-size: 36rpx;
+    padding: 0 20rpx;
+    /* background-color: #5796cc; */
+    /* border: 1px solid black; */
+    border-radius: 20rpx 0;
+    position: relative;
+}
+/* .nav-switch-style::after {
+    content: "";
+    display: block;
+    width: 100rpx;
+    position: absolute;
+    height: 10rpx;
+    width: 10rpx;
+    background-color: black;
+    left: -15rpx;
+} */
+
+.style-default {
+    text-align: center;
+    
+}
+/* --------我的关注css------------- */
+.video-scroll-view {
+    margin-top: 20rpx;
+    margin-left: 20rpx;
+    width: 100%;
+    height: 240rpx;
+    white-space: nowrap;
+}
+.video-scroll-view .item-navigator {
+    width: 205rpx;
+    height: 215rpx;
+    /* border: 1px solid red; */
+    display: inline-block;
+    margin-right: 20rpx;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 20rpx;
+}
+.item-navigator .scroll-image image {
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 50%;
+    margin-top: 15rpx;
+}
+.item-navigator .scroll-name {
+    font-size: 28rpx;
+}
+
+/* ------------------------文字css---------------- */
+.user-content {
+    width: 95%;
+    margin: 20rpx auto;
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+    display: flex;
+    background-color: #fff;
+    border-radius: 14rpx;
+    position: relative;
+    box-shadow: 3rpx 3rpx 3rpx 3rpx gray;
+}
+.user-headpor image {
+    width: 145rpx;
+    height: 145rpx;
+    border-radius: 50%;
+    margin: 15rpx;
+    margin-right: 26rpx;
+}
+.user-text {
+    width: 68%;
+}
+.user-image, .user-video {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20rpx;
+    margin-bottom: 50rpx;
+}
+.user-image image {
+    margin-bottom: 4rpx;
+}
+.user-video video {
+    width: 100%;
+}
+.user-text .user-name {
+    text-align: left;
+    margin: 15rpx 0;
+}
+.user-text .user-input {
+    text-align: left;
+    font-size: 28rpx;
+    font-family: "楷体";
+    margin-top: 14rpx;
+}
+.user-foot {
+    font-size: 24rpx;
+    display: flex;
+    /* border: 1px solid red; */
+    position: absolute;
+    bottom: 8rpx;
+    right: 30rpx;
+}
+.user-content .comment-group,
+.user-foot .praise-group {
+    margin: 0 15rpx;
+    display: flex;
+}
+.user-foot .comment-group image,
+.user-foot .praise-group image {
+    width: 35rpx;
+    height: 35rpx;
+    margin: 0 5rpx;
+}
+
