@@ -32,8 +32,13 @@ Page({
                     this.setData({
                         userInfo: res.userInfo,
                     })
-                    console.log(res);
-                    app.onGetUserInfo(res.userInfo);
+                    wx.cloud.callFunction({
+                        name: "login",
+                        success: res => {
+                            that.data.userInfo.openid =  res.result.openid
+                        }
+                    })
+                    app.onGetUserInfo(that.data.userInfo);
                     wx.navigateBack({
                         delta: 1
                     });

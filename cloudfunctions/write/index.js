@@ -4,12 +4,14 @@ const cloud = require('wx-server-sdk')
 cloud.init();
 const db = cloud.database();
 
-
 // 云函数入口函数
 exports.main = async (event, context) => {
     const content = event.content;
     const author = event.author;
-    // 云调用实现文本内容检测
+    const image = event.image;
+    console.log(content)
+    
+    // 云用实现文本内容检测
     try {
         const result = await cloud.openapi.security.msgSecCheck({
             content: event.content,
@@ -24,8 +26,9 @@ exports.main = async (event, context) => {
             db.collection("comments").add({
                 data: {
                     content: content,
-                    author: author
-                }  
+                    author: author,
+                    image: image
+                }
             })
             return {
                 code: 200,
