@@ -1,0 +1,50 @@
+<view class="user-content">
+  <view class="user-headpor">
+    <image src="{{writeNew.author.avatarUrl}}" />
+  </view>
+  <view class="user-text">
+    <view class="user-name">{{writeNew.author.nickName}}</view>
+    <view class="user-input">{{writeNew.content}}</view>
+    <block wx:if="{{writeNew.image.length > 0}}">
+      <!-- 定义一张图片的布局 -->
+      <view class="user-image" wx:if="{{writeNew.image.length === 1}}">
+        <image src="{{writeNew.image[0]}}" style="width: 100%;max-height: {{twoImage * 2}}rpx;" mode="aspectFill" />
+      </view>
+      <!-- 定义两张或四章图片 -->
+      <view class="user-image" wx:if="{{writeNew.image.length === 2 || writeNew.image.length === 4}}">
+        <image wx:for="{{writeNew.image}}" wx:for-item="img" src="{{img}}"
+          style="width: {{twoImage * 2}}rpx;max-height: {{twoImage * 2}}rpx;" mode="aspectFill" />
+      </view>
+      <!-- 定义其他图片 -->
+      <view class="user-image" wx:if="{{writeNew.image.length === 9}}">
+        <image wx:for="{{writeNew.image}}" wx:for-item="img" src="{{img}}"
+          style="width: {{threeImage * 2}}rpx;max-height: {{threeImage * 2}}rpx;" mode="aspectFill" />
+        <image wx:if="{{writeNew.image.length%3 == 2}}" src="" style="width: {{threeImage * 2}}rpx;height: 1px;" />
+      </view>
+    </block>
+  </view>
+  <view class="user-foot">
+    <view wx:if="{{detailUrl == 0}}" class="comment-group">
+    </view>
+    <view wx:else class="comment-group">
+      <navigator url="{{detailUrl}}">
+        <image src="../../images/edit-box-line.png" />
+        <view class="text">评论</view>
+      </navigator>
+    </view>
+    <view class="praise-group" bind:tap="onPraiseTap" data-new="{{writeNew}}">
+      <block wx:if="{{detailUrl == 0}}" class="comment-group">
+      </block>
+      <block wx:else class="comment-group">
+        <block wx:if="{{News.praise.length != undefined && News.praise.length != 0}}">
+          <image src="../../images/heart-fill-hover.png" />
+          <view class="text">{{News.praise.length}}</view>
+        </block>
+        <block wx:if="{{News.praise == undefined || News.praise.length == 0}}">
+          <image src="../../images/heart-line.png" />
+          <view class="text">喜欢</view>
+        </block>
+      </block>
+    </view>
+  </view>
+</view>

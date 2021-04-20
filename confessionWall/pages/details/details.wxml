@@ -1,0 +1,23 @@
+<newsMould detailUrl="0" writeNew="{{writeNew}}"></newsMould>
+<view class="content">
+    <view class="commentNum">评论{{comments.length}}</view>
+    <view class="comment-group" wx:for="{{comments}}" wx:for-item="comment">
+        <view class="image-group">
+            <image src="{{comment.author}}">
+            </image>
+        </view>
+        <view class="text-group">
+            <view class="name">{{comment.authorName}}</view>
+            <view class="comment">{{comment.userComment}}</view>
+        </view>
+    </view>
+</view>
+
+<form class="" bindsubmit="onSubmitEvent">
+    <view class="input-comment-group">
+        <view class="input-text"  style="width:{{inputWidth * 2}}rpx;">
+            <input class="input" cursor-spacing="20" bindinput="onInput" bindblur="onBlur" bindfocus="onFocus"  name="content" type="text" placeholder="说出你的想法叭~"/>
+        </view>
+        <button disabled="{{is_input}}" form-type="submit" type="primary" style="width:80rpx;height:50rpx;margin: 10rpx;padding:0; font-size:24rpx;line-height:50rpx;">发送</button>
+    </view>    
+</form>

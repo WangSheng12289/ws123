@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "segment": "/components/segment/segment"
+    "newsMould": "/components/newsMould/newsMould"
   },
   "backgroundColor": "#E2E2E2",
   "backgroundTextStyle": "dark",

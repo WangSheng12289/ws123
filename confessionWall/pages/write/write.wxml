@@ -6,14 +6,6 @@
             </button>
         </view>
         <textarea name="content" class="textarea" placeholder="请输入文字"></textarea>
-        <!-- <view class="add-tools">
-            <view bind:tap="showAddImageTap" class="add-group">
-                <image src="../../images/image-line.png" />
-            </view>
-            <view bind:tap="showAddvideoTap" class="add-group">
-                <image src="../../images/video-chat-line.png" />
-            </view>
-        </view> -->
         <view wx:if="{{showImage}}" class="image-list-group">
             <view class="image-group" style="width: {{imageHeight * 2}}rpx;height: {{imageHeight * 2}}rpx;" wx:for="{{imageList}}" wx:key="id">
                 <view class="overflow" style="width: {{imageHeight * 2}}rpx;height: {{imageHeight * 2}}rpx;">

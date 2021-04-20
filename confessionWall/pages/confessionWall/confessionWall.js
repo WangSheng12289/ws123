@@ -79,6 +79,9 @@ Page({
             navState: index
         })
     },
+    onMyEvent: function(e){
+        console.log("aaa") // 自定义组件触发事件时提供的detail对象
+    },
     //点赞
     onPraiseTap: function (event) {
         const that = this;

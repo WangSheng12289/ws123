@@ -1,0 +1,45 @@
+/* pages/details/details.wxss */
+.content {
+    padding: 20rpx;
+}
+.commentNum {
+    margin-bottom: 10rpx;
+}
+.comment-group {
+    display: flex;
+    border-bottom: 1px solid #cccccc;
+    margin-top: 15rpx;
+    padding-bottom: 10rpx;
+}
+.comment-group .image-group image {
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50%;
+    margin-right: 15rpx;
+}
+.text-group .name {
+    font-size: 28rpx;
+}
+.text-group .comment {
+    font-size: 26rpx;
+}
+/* ---------------------------------- */
+.input-comment-group {
+    width: 94%;
+    margin: 0 3%;
+    height: 70rpx;
+    position: fixed;
+    bottom: 20rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-text {
+    width: 80%;
+    line-height: 50rpx;
+    border-radius: 35rpx;
+    height: 50rpx;
+    padding: 10rpx 20rpx;
+    background-color: rgb(245, 245, 245);
+}
+
