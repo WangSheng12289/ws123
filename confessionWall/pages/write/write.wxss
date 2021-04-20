@@ -1,0 +1,107 @@
+page {
+    background-color: rgb(244, 244, 244);
+}
+.textarea {
+    padding-top: 10rpx;
+    width: 95%;
+    height: 200rpx;
+    margin: 0 auto;
+    /* border: 1px solid #f0f0f0; */
+}
+.add-tools {
+    border: 1px solid red;
+    height: 50rpx;
+    line-height: 50rpx;
+    display: flex;
+    justify-content: flex-start;
+}
+.add-tools .add-group {
+    width: 48rpx;
+    height: 48rpx;
+    margin-right: 15rpx;
+}
+.add-tools image {
+    width: 100%;
+    height: 100%;
+}
+.container {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+}
+.write-text-btn {
+    margin: 30rpx;
+}
+/* -------------------------------- */
+.image-list-group {
+    /* width: 100%; */
+    display: flex;
+    justify-content: flex-start;
+    /* border: 1px solid red; */
+    flex-wrap: wrap;
+    padding: 15rpx;
+}
+.image-list-group .image-group {
+    position: relative;
+    margin: 5rpx;
+}
+/* .image-list-group image {
+    position: relative;
+    margin: 5rpx;
+} */
+.image-group .overflow {
+    overflow: hidden;
+}
+/* .close-btn {
+    width: 30rpx;
+    height: 30rpx;
+    border-radius: 50%;
+    position: absolute;
+    right: -15rpx;
+    top: -15rpx;
+    z-index: 1;
+} */
+.tbn {
+    width: 30rpx;
+    height: 30rpx;
+    border-radius: 50%;
+    position: absolute;
+    background-color: red;
+    right: -15rpx;
+    top: -15rpx;
+    z-index: 1;
+}
+
+/* ------------------------ */
+.image-add-group {
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 10rpx;
+    margin: 5rpx;
+    
+}
+.image-add-group .image-add {
+    text-align: center;
+}
+.image-add-group .image-add image {
+    width: 110rpx;
+    height: 110rpx;
+}
+.image-add-group .image-add .text {
+    /* border: 1px solid red; */
+    font-size: 32rpx;
+    color: rgba( 0, 0, 0, 0.34);
+}
+.temp {
+    margin-top: 20rpx;
+    background-color: #fff;
+}
+.button-group {
+    padding-top: 10rpx;
+    width: 100%;
+    height: 50rpx;
+    position: relative;
+}

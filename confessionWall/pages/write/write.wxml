@@ -1,0 +1,25 @@
+<view class="container">
+    <form bindsubmit="onSubmitEvent">
+        <view class="button-group">
+            <button id="write-text-btn" type="primary" form-type="submit" style="position:absolute;right:20rpx; margin:0px;padding:0px;width:80rpx; height:50rpx;line-height: 50rpx; font-size:28rpx;">
+                发表
+            </button>
+        </view>
+        <textarea name="content" class="textarea" placeholder="请输入文字"></textarea>
+        <view wx:if="{{showImage}}" class="image-list-group">
+            <view class="image-group" style="width: {{imageHeight * 2}}rpx;height: {{imageHeight * 2}}rpx;" wx:for="{{imageList}}" wx:key="id">
+                <view class="overflow" style="width: {{imageHeight * 2}}rpx;height: {{imageHeight * 2}}rpx;">
+                    <image src="{{item}}" mode="aspectFill" style="width: {{imageHeight * 2}}rpx;max-height: {{imageHeight * 2}}rpx;" bind:tap="onImageTap" data-index="{{index}}"></image>
+                </view>
+                <view class="tbn"  bind:tap="closeBtn"  data-index="{{index}}">
+                </view>
+            </view>
+            <view wx:if="{{imageList.length < 9}}" class="image-add-group" bind:tap="addImageTap" style="width: {{imageHeight * 2}}rpx;height:{{imageHeight * 2}}rpx;">
+                <view class="image-add">
+                    <image src="../../images/camera-fill.png" />
+                    <view class="text">图片</view>
+                </view>
+            </view>
+        </view>
+    </form>
+</view>

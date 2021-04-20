@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "newsMould": "/components/newsMould/newsMould"
+  },
+  "backgroundColor": "#E2E2E2",
+  "backgroundTextStyle": "dark",
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "表白墙"
+}

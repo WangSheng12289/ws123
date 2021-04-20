@@ -1,0 +1,88 @@
+<view class="bg-group" style="height:{{height * 2.7}}rpx;">
+  <view class="bg-header" style="width:{{bgHeaderR * 2}}rpx;height:{{bgHeaderR * 2}}rpx;"></view>
+</view>
+<swiper class='swiper' style='width:{{width*-30}}rpx;height:{{height*2}}rpx;' autoplay indicator-dots autoplay
+  indicator-dots interval="3000" circular>
+  <swiper-item>
+    <image src='https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=237097378,1234629845&fm=26&gp=0.jpg'></image>
+  </swiper-item>
+  <swiper-item>
+    <image src='https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=250287720,435195661&fm=26&gp=0.jpg'></image>
+  </swiper-item>
+  <swiper-item>
+    <image src='https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2776473053,3778805647&fm=26&gp=0.jpg'></image>
+  </swiper-item>
+  <swiper-item>
+    <image src='https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=841536615,2308079028&fm=26&gp=0.jpg'></image>
+  </swiper-item>
+</swiper>
+<!-- 导航条 -->
+<view class="nav">
+  <view bindtap="navSwitch" data-index="0" class="{{navState==0 ? 'nav-switch-style':'nav-switch-begin'}}">
+    本校
+  </view>
+  <view bindtap="navSwitch" data-index="1" class="{{navState==1 ? 'nav-switch-style':'nav-switch-begin'}}">
+    推荐
+  </view>
+  <view bindtap="navSwitch" data-index="2" class="{{navState==2 ? 'nav-switch-style':'nav-switch-begin'}}">
+    心愿墙
+  </view>
+  <view bindtap="navSwitch" data-index="3" class="{{navState==3 ? 'nav-switch-style':'nav-switch-begin'}}">
+    功能暂定
+  </view>
+</view>
+<!-- 不可滑动页 -->
+<view>
+  <view wx:if="{{navState==0}}" class="style-default">
+    <view class="title">
+      <view class="title-decorate"></view>
+      <view class="title-text">我的关注</view>
+    </view>
+    <scroll-view class="video-scroll-view" scroll-x="ture">
+      <view class="item-navigator">
+        <view class="scroll-image">
+          <image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=202695443,812736273&fm=26&gp=0.jpg" />
+        </view>
+        <view class="scroll-name">德锦</view>
+        <view class="scroll-text"></view>
+      </view>
+      <view class="item-navigator">
+        <view class="scroll-image">
+          <image src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1834742881,2792191833&fm=26&gp=0.jpg" />
+        </view>
+        <view class="scroll-name">霹雳番茄卡蛋</view>
+        <view class="scroll-text"></view>
+      </view>
+      <view class="item-navigator">
+        <view class="scroll-image">
+          <image src="https://img0.baidu.com/it/u=510048322,1420180238&fm=26&fmt=auto&gp=0.jpg" />
+        </view>
+        <view class="scroll-name">润泽</view>
+        <view class="scroll-text"></view>
+      </view>
+      <view class="item-navigator">
+        <view class="scroll-image">
+          <image src="https://img0.baidu.com/it/u=510048322,1420180238&fm=26&fmt=auto&gp=0.jpg" />
+        </view>
+        <view class="scroll-name">北港</view>
+        <view class="scroll-text"></view>
+      </view>
+    </scroll-view>
+    <!-- 分割连个板块 -->
+    <view class="title">
+      <view class="title-decorate"></view>
+      <view class="title-text">最新动态</view>
+    </view>
+    <!-- 定义文字动态模板 -->
+    <newsMould bindmyevent="onMyEvent" wx:for="{{writeNews}}" wx:key="ii" wx:for-item="writeNew" writeNew="{{writeNew}}" detailUrl="../details/details?index={{index}}"></newsMould>
+  
+  </view>
+  <view wx:elif="{{navState==1}}" class="style-default"></view>
+  <view wx:elif="{{navState==2}}" class="style-default"></view>
+  <view wx:else="{{navState==3}}" class="style-default"></view>
+</view>
+<!-- 发动态 -->
+<view class="release" hover-class="rel-hover" bindtap="onWriteTab">
+  <view class="reCol"></view>
+  <view class="reRow"></view>
+</view>
