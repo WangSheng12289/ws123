@@ -2,9 +2,10 @@
   "pages": [
     "pages/confessionWall/confessionWall",
     "pages/write/write",
+    
     "pages/first/first",
     "pages/login/login",
-    "pages/details/details"
+    "components/segment/segment"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
