@@ -2,7 +2,7 @@
   "pages": [
     "pages/confessionWall/confessionWall",
     "pages/write/write",
-    
+    "pages/me/me",
     "pages/first/first",
     "pages/login/login",
     "components/segment/segment"
@@ -15,20 +15,29 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "color": "#bfbfbf",
+    "color": "#bfbfbf",    
     "selectedColor": "#d81e06",
-    "list": [
-      {
+    "list": [    
+      {   
         "pagePath": "pages/first/first",
-        "text": "首 页"
+        "iconPath": "images/shou1.png",
+        "selectedIconPath":"images/shou.png",  
+        "text": "首 页"    
+      },    
+      {   
+        "pagePath": "pages/confessionWall/confessionWall",  
+        "iconPath": "images/qiang1.png",
+        "selectedIconPath":"images/qiang2.png",  
+        "text": "表白墙" 
       },
-      {
-        "pagePath": "pages/confessionWall/confessionWall",
-        "text": "表白墙"
+      {   
+        "pagePath": "pages/me/me",  
+        "iconPath": "images/me1.png",
+        "selectedIconPath":"images/me2.png",  
+        "text": "me的" 
       }
     ]
   },
   "cloud": true,
-  "sitemapLocation": "sitemap.json",
-  "style": "v2"
+  "sitemapLocation": "sitemap.json"
 }
